@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    image: neevaiti/test-django:v1
+    platform: linux/amd64
+    volumes:
+      - .:/code
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
